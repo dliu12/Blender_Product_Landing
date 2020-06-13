@@ -1,0 +1,254 @@
+$borderTest: 1px solid orange;
+$textColor: orange;
+@mixin settingPadMar {
+    padding:0;
+    margin:0;
+}
+@mixin center{
+    margin-left:auto;
+    margin-right:auto;
+}
+@mixin media($size,$screen){
+    @media screen and (max-width:$screen){
+        font-size:$size;
+    }
+}
+@mixin mediaQuery($size,$property,$value)
+{
+    @media screen and (max-width:$size){
+        $property:$value;
+    }
+}
+
+html{
+    background:url("Bkground/background1.png");
+    background-size:200px 200px;
+    background-repeat: repeat;
+    font-family: 'Open Sans', sans-serif;
+    color:#ECECEC;
+    scroll-behavior: smooth;
+    body{
+        @include settingPadMar;
+    }
+}
+ul{
+    list-style: none;
+}
+a, a:visited{
+    color:orange;
+    text-decoration: none;
+}
+header{
+    @include settingPadMar;
+    width:100%;
+    height:fit-content;
+    nav{
+        position:fixed;
+        width:100%;
+        height:50px;
+        background-color:#3C3C3C;
+        z-index:1;
+        ul{
+            @include settingPadMar;
+            width:50%;
+            max-width:650px;
+            height:100%;
+            display:grid;
+            grid-template-columns: 50px 1fr 2fr 1fr;
+            grid-gap:1%;
+            align-items: center;
+            justify-items: center;
+            color:$textColor;
+            @media screen and (max-width:400px){
+                width:60%;
+            }
+            li{
+                height:fit-content;
+                font-family: 'MuseoModerno', cursive;
+                font-weight:500;
+                font-size:18px;
+                @include media(14px,700px);
+                @include media(12px,500px);
+                img{
+                    width:100%;
+                    filter:invert(0.95);
+                }
+            }
+        }
+
+    }
+    h1{
+        @include settingPadMar;
+        position:absolute;
+        right:10px;
+        top:0;
+        background:radial-gradient(60.91% 291.46% at 53.38% 50%, #CCC6C6 67.71%, rgba(251, 251, 251, 0) 99.97%);
+        font-size:65px;
+        -webkit-background-clip:text;
+        background-clip:text;
+        -webkit-text-fill-color:transparent;
+        font-family: 'MuseoModerno', cursive;
+        font-weight:600;
+        z-index:2;
+        @include media(40px,700px);
+        @include media(25px,400px);
+        @media screen and (max-width:375px){
+            right:2px;
+        }
+
+    }
+}
+
+#mainContent{
+    #video{
+        position:relative;
+        width:100%;
+        margin-top:10px;
+        z-index:-1;
+    }
+    p{
+        @include settingPadMar;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size:20px;
+        @include media(15px,700px);
+        @include media(12px,400px);
+        strong{
+            font-family: 'MuseoModerno', cursive;
+            color:orange;
+            font-size:35px;
+            @include media(20px,700px);
+            @include media(16px,400px);
+        }
+    }
+    p:first-of-type{
+        font-size:30px;
+        font-weight:bold;
+        @include media(18px,700px);
+        @include media(14px,400px);
+    }
+    #form{
+        width:50%;
+        height:25px;
+        margin-top:15px;
+        @include center;
+        display:grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap:1%;
+        @media screen and (max-width:500px){
+            width:75%;
+        }
+        #email{
+            padding-left:10px;
+            color:gray;
+        }
+        #submit{
+            background-color:#4CAF50;
+            border:none;
+            color:white;
+            font-size:16px;
+            font-weight:bold;
+            cursor: pointer;
+        }
+    }
+}
+
+#supportContent{
+    margin-top: 50px;
+    #supportMain{
+        @include settingPadMar;
+        width:75%;
+        @include center;
+        display:flex;
+        flex-direction:row;
+        @media screen and (max-width:750px){
+            width:100%;
+            height:fit-content;
+            flex-direction:column;
+        }
+        .support{
+            width:100%;
+            margin-left:20px;
+            margin-right:20px;
+            text-align: center;
+            @media screen and (max-width:700px){
+                margin:25px 0 0 0;
+            }
+            strong{
+                display:block;
+                padding:15px 0 5px 0;
+                font-family: 'MuseoModerno', cursive;
+                font-weight:500;
+                font-size:20px;
+            }
+            ul{
+                list-style:disc inside;
+                text-align:left;
+                @media screen and (max-width:700px){
+                    @include center;
+                    width:75%;
+                    font-size:15px;
+                }
+                p{
+                    font-size:15px;  
+                }
+                @media screen and (max-width:400px){
+                    @include settingPadMar;
+                    @include center;
+                    width:80%;
+                }
+            }
+            img{
+                    position: relative;
+                    display:block;
+                    @include center;
+                    border:5px solid orange;
+                    border-radius:25px;
+                    width:50%;
+                    min-width:250px;
+            }
+        }
+    }
+}
+
+footer{
+    position:relative;
+    width:100%;
+    margin-top:5vmin;
+    ol{
+        
+        width:75%;
+        @include center;
+        list-style-position: inside;
+        strong{
+            font-family: 'MuseoModerno', cursive;
+            font-weight:500;
+            font-size:20px;
+            @include media(14px,400px);
+        }
+        @media screen and (max-width:400px){
+            @include settingPadMar;
+            @include center;
+            width:95%;
+            font-size:12px;
+        }
+    }
+    div{
+        margin-top:25px;
+        position: relative;
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        text-align:right;
+        #author{
+            @include settingPadMar;
+            width:100%;
+           
+        }
+        #reference{
+            @include settingPadMar;
+            width:100%;
+        }
+        @include media(14px,400px);
+    }
+}
