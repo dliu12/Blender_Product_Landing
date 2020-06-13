@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Blender Product Landing Page">
+        <meta name="author" content="Diyi Liu">
+        <meta name="keywords" content="Blender,JavaScript,CSS,HTML,Product Landing Page, Personal Project Practice">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;500;600;800&family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+
+    <body>
+        <header id="header">
+            <nav id="nav-bar">
+                <ul>
+                    <li id="header-img"><img src="Images/Personal_Logo1.png"/></li>
+                    <li class="nav-link"><a href="#video">Home</a></li>
+                    <li class="nav-link"><a href="#form">Subscribe</a></li>
+                    <li class="nav-link"><a href="#supportContent">Features</a></li>
+                </ul>
+            </nav>
+            <h1>BLENDER</h1>
+        </header>
+
+        <div id="mainContent">
+            <video id="video" autoplay loop>
+                <source src="Images/AnimationRender1.mkv" type="video/mp4">
+            </video>
+            <p>Create the most fastinating models and videos!</p>
+            <p>Sign up with your email below and <strong>start</strong> today!</p>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <input id="email" type="email" name="email" value="Email address" pattern="[\w._%+-]+@[\w]+\.[a-z]{2,}$">
+                <input id="submit" type="submit" value="Submit">
+            </form>
+        </div>
+
+        <div id="supportContent"> 
+            <ul id="supportMain">
+                <li class="support">
+                    <div class="img">
+                        <img src="Images/Screenshot2_Animation Attempt.png"/>
+                    </div>
+                    <strong>3D Modeling</strong>
+                    <ul>
+                        <li>Numerous primitive objects</li>
+                        <li>Advance sculpting and 3D painting with countless textured brushes</li>
+                        <li>Multiparts component editings</li>
+                    </ul>
+                </li>
+
+                <li class="support">
+                    <div class="img">
+                        <img src="Images/Screnshot3_Animation.png"/>
+                    </div>
+                    <strong>Video Editting</strong>
+                    <p>Makes video editing easy, professional and up to industry standard.</p>
+                    <ul>
+                        <li>Scene creation with advance lighting and camera options</li>
+                        <li>Keyframes, curve editors, and dope sheets</li>
+                        <li>Sound synchronization</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </body>
+
+    <footer>
+        <ol id="citation">
+            <strong>Citations:</strong>
+            <li>Foundation, B. (n.d.). Home of the Blender project - Free and Open 3D Creation Software. Retrieved June 12, 2020, from https://www.blender.org/</li>
+        </ol>
+
+        <div>
+            <p id="author">Author: Diyi Liu</p>
+            <p id="reference">
+                Find me 
+                <a href="https://dliu12.github.io/Portfolio/" target="_blank"> HERE</a>
+            </p>
+        </div>
+    </footer>
+</html>
